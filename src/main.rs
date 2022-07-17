@@ -1,6 +1,7 @@
 use std::io;
-pub mod gessinggame;
 
+pub mod gessinggame;
+pub mod rust_dock;
 
 
 fn main() {
@@ -9,6 +10,7 @@ fn main() {
         println!("Choose your Subprogram");
         println!("1 for Exit");
         println!("2 for Gessing-Game");
+        println!("3 for Dock and Test");
 
         let mut guess = String::new();
 
@@ -21,11 +23,11 @@ fn main() {
             Err(_) => continue,
         };
 
-        //println!("You guessed: {guess}");
 
         match guess {
             1 => break,
             2 => gessinggame::gessing_game(),
+            3=> rust_dock::dockumentation(),
             13..=19 => println!("A teen"),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
