@@ -11,3 +11,10 @@ pub(crate) fn dockumentation() {
         }
     }
 }
+
+pub(crate) fn looping(){
+    for number in (1..4).rev() {
+        println!("{number}!");
+    }
+    println!("LIFTOFF!!!");
+}

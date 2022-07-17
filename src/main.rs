@@ -2,6 +2,7 @@ use std::io;
 
 pub mod gessinggame;
 pub mod rust_dock;
+pub mod chapter_3;
 
 
 fn main() {
@@ -27,8 +28,9 @@ fn main() {
         match guess {
             1 => break,
             2 => gessinggame::gessing_game(),
-            3=> rust_dock::dockumentation(),
-            13..=19 => println!("A teen"),
+            3 => rust_dock::dockumentation(),
+            4 => rust_dock::looping(),
+            5 => chapter_3::temperatur_calculator(),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
     }
