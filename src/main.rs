@@ -1,5 +1,5 @@
 use std::io;
-//mod gessinggame;
+pub mod gessinggame;
 
 
 
@@ -25,7 +25,7 @@ fn main() {
 
         match guess {
             1 => break,
-            2 | 3 | 5 | 7 | 11 => println!("This is a prime"),
+            2 => gessinggame::gessing_game(),
             13..=19 => println!("A teen"),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
