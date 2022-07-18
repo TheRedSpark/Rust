@@ -7,6 +7,15 @@ pub mod rust_dock;
 pub mod chapter_3;
 
 
+
+fn _notmain() {
+    let mut foo = String::new();
+    std::io::stdin().read_line(& mut foo).expect("fail");
+    dbg!(foo);
+}
+
+
+
 fn main() {
     loop {
         println!("");
