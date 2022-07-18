@@ -12,6 +12,8 @@ fn main() {
         println!("1 for Exit");
         println!("2 for Gessing-Game");
         println!("3 for Dock and Test");
+        println!("4 for a Looping");
+        println!("5 for Temprechner");
 
         let mut guess = String::new();
 
