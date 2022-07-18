@@ -1,21 +1,30 @@
 use std::io;
 
 pub(crate) fn temperatur_calculator() {
-    println!("Gib 1 für F in C");
-    println!("Gib 2 für C in F");
-    let mut guess = String::new();
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
-    println!("Das hast du eingegeben {guess}");
-    //let my_int: i32 = guess.parse().unwrap();
+    loop {
+        println!("Gib 1 für F in C");
+        println!("Gib 2 für C in F");
 
-    if guess == "1" {
-        let result = f_c();
-        println!("In Celsius sind das {result}");
-    } else if guess == "2" {
-        let result = c_f();
-        println!("In Fahrenheit sind das {result}");
+        let mut guess = String::new();
+
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
+
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => { num }
+            Err(_) => continue,
+        };
+
+
+        if guess == 1 {
+            let result = f_c();
+            println!("In Celsius sind das {result}");
+        } else if guess == 2 {
+            let result = c_f();
+            println!("In Fahrenheit sind das {result}");
+        }
+        break;
     }
 }
 
@@ -25,7 +34,7 @@ fn f_c() -> f64 {
     io::stdin()
         .read_line(&mut fahrenheit_str)
         .expect("Failed to read line");
-    println!("Das hast du eingegeben {fahrenheit_str}");
+    //println!("Das hast du eingegeben {fahrenheit_str}");
     let fahrenheit_int: f64 = fahrenheit_str.parse().unwrap();
     let celsius: f64 = (fahrenheit_int - 32.0) * (5.0 / 9.0);
     return celsius;

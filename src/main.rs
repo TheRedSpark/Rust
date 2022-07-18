@@ -1,3 +1,5 @@
+extern crate core;
+
 use std::io;
 
 pub mod gessinggame;
