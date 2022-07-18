@@ -59,17 +59,18 @@ pub(crate) fn fibonacci() {
         .expect("Failed to read line");
 
     let fibonatchi_anzahl: i32 = fibonatchi_anzahl.trim().parse().unwrap();
-    let fibonatchi_index = fibonatchi_anzahl - 1;
-    let fibonatchi = [10, 20, 30, 40, 50];
     let mut index = 0;
-    let mut fib_1 = 0;
-    let mut fib_2 = 1;
-    let mut fib_3 = 1;
+    let mut fib_1:i128 = 0;
+    let mut fib_2:i128 = 1;
+    let mut fib_3:i128;
     while index < fibonatchi_anzahl {
         fib_3 = fib_1 + fib_2;
         fib_1 = fib_2;
         fib_2 = fib_3;
-        println!("Deine Fibonatchi Zahl {fib_3}");
         index += 1;
+        if index == fibonatchi_anzahl{
+            println!("Deine Fibonatchi Zahl {fib_3}");
+        }
     }
+
 }
