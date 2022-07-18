@@ -7,13 +7,11 @@ pub mod rust_dock;
 pub mod chapter_3;
 
 
-
 fn _notmain() {
     let mut foo = String::new();
-    std::io::stdin().read_line(& mut foo).expect("fail");
+    std::io::stdin().read_line(&mut foo).expect("fail");
     dbg!(foo);
 }
-
 
 
 fn main() {
@@ -25,6 +23,7 @@ fn main() {
         println!("3 for Dock and Test");
         println!("4 for a Looping");
         println!("5 for Temprechner");
+        println!("6 for Fibonatchi");
 
         let mut guess = String::new();
 
@@ -44,6 +43,7 @@ fn main() {
             3 => rust_dock::dockumentation(),
             4 => rust_dock::looping(),
             5 => chapter_3::temperatur_calculator(),
+            6 => chapter_3::fibonacci(),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
     }
