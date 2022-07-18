@@ -66,7 +66,7 @@ pub(crate) fn fibonacci() {
     while index < fibonatchi_anzahl {
         fib_3 = fib_1 + fib_2;
         fib_1 = fib_2;
-        fib_2 = fib_3;
+        fib_2 = fib_3; //todo!("Nummernanzahl fixen");
         index += 1;
         if index == fibonatchi_anzahl {
             println!("Deine Fibonatchi Zahl {fib_3}");
