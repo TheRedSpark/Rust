@@ -5,6 +5,7 @@ use std::io;
 pub mod gessinggame;
 pub mod rust_dock;
 pub mod chapter_3;
+pub mod chapter_4;
 
 
 fn _notmain() {
@@ -24,6 +25,7 @@ fn main() {
         println!("4 for a Looping");
         println!("5 for Temprechner");
         println!("6 for Fibonatchi");
+        println!("7 for Ownership");
 
         let mut guess = String::new();
 
@@ -44,6 +46,7 @@ fn main() {
             4 => rust_dock::looping(),
             5 => chapter_3::temperatur_calculator(),
             6 => chapter_3::fibonacci(),
+            7 => chapter_4::ownership(),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
     }
