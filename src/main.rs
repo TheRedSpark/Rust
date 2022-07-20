@@ -6,6 +6,7 @@ pub mod gessinggame;
 pub mod rust_dock;
 pub mod chapter_3;
 pub mod chapter_4;
+pub mod chapter_5;
 
 
 fn _notmain() {
@@ -26,6 +27,7 @@ fn main() {
         println!("5 for Temprechner");
         println!("6 for Fibonatchi");
         println!("7 for Ownership");
+        println!("8 for Chapter 5");
 
         let mut guess = String::new();
 
@@ -47,6 +49,7 @@ fn main() {
             5 => chapter_3::temperatur_calculator(),
             6 => chapter_3::fibonacci(),
             7 => chapter_4::ownership(),
+            8 => chapter_5::chapter_5(),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
     }
