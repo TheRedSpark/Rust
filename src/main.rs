@@ -28,19 +28,20 @@ fn main() {
         println!("6 for Fibonatchi");
         println!("7 for Ownership");
         println!("8 for Chapter 5");
+        println!("9 for Area");
 
-        let mut guess = String::new();
+        /*        let mut guess = String::new();
 
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line");
+                io::stdin()
+                    .read_line(&mut guess)
+                    .expect("Failed to read line");
 
-        let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num,
-            Err(_) => continue,
-        };
+                let guess: u32 = match guess.trim().parse() {
+                    Ok(num) => num,
+                    Err(_) => continue,
+                };*/
 
-
+        let guess: i32 = 9;
         match guess {
             1 => break,
             2 => gessinggame::gessing_game(),
@@ -50,7 +51,9 @@ fn main() {
             6 => chapter_3::fibonacci(),
             7 => chapter_4::ownership(),
             8 => chapter_5::chapter_5(),
+            9 => chapter_5::area(),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
+        break;
     }
 }
