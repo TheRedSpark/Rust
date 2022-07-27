@@ -9,7 +9,7 @@ pub mod chapter_4;
 pub mod chapter_5;
 
 
-fn _notmain() {
+fn _main() {
     let mut foo = String::new();
     std::io::stdin().read_line(&mut foo).expect("fail");
     dbg!(foo);
@@ -54,6 +54,7 @@ fn main() {
             9 => chapter_5::area(),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
+        
         break;
     }
 }
