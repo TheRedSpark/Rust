@@ -9,19 +9,12 @@ use fs_extra::error::*;
 
 
 fn example_copy() -> Result<()> {
-    let path_from = Path::new("Arbeitsordner");
-    let path_to = path_from.join("Kopieziel");
-    let test_folder = path_from.join("Sourcefolder");
-    let dir = test_folder.join("dir");
-    let sub = dir.join("sub");
-    let file1 = dir.join("file1.txt");
-    let file2 = sub.join("file2.txt");
+    let path_from = Path::new("Ausgangsordner");
+    let path_to = Path::new("Eingangsordner");
 
-    create_all(&path_to, true)?;
-    create_all(&test_folder, true)?;
+    create_all(&path_from, false)?;
+    create_all(&path_to, false)?;
 
-    // assert!(dir.exists());
-    // assert!(sub.exists());
 
 
     let options = CopyOptions {
@@ -34,7 +27,7 @@ fn example_copy() -> Result<()> {
             tx.send(process_info).unwrap();
             thread::sleep(time::Duration::from_millis(500));
         };
-        copy(&test_folder, &path_to, &options).unwrap();
+        copy(&path_from, &path_to, &options).unwrap();
     });
 
     loop {
