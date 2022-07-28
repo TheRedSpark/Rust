@@ -17,15 +17,11 @@ fn example_copy() -> Result<()> {
     let file1 = dir.join("file1.txt");
     let file2 = sub.join("file2.txt");
 
-    create_all(&sub, true)?;
     create_all(&path_to, true)?;
-    //fs_extra::file::write_all(&file1, "content1")?;
-    //fs_extra::file::write_all(&file2, "content2")?;
+    create_all(&test_folder, true)?;
 
-    assert!(dir.exists());
-    assert!(sub.exists());
-    //assert!(file1.exists());
-    //assert!(file2.exists());
+    // assert!(dir.exists());
+    // assert!(sub.exists());
 
 
     let options = CopyOptions {
