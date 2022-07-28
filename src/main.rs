@@ -8,6 +8,8 @@ pub mod chapter_3;
 pub mod chapter_4;
 pub mod chapter_5;
 pub mod chapter_6;
+pub mod file_service;
+pub mod example_copy;
 
 
 fn _main() {
@@ -30,7 +32,8 @@ fn main() {
         println!("7 for Ownership");
         println!("8 for Chapter 5");
         println!("9 for Area");
-        println!("10 für Emums");
+        println!("10 for Emums");
+        println!("11 for File Service");
 
         /*        let mut guess = String::new();
 
@@ -43,7 +46,7 @@ fn main() {
                     Err(_) => continue,
                 };*/
 
-        let guess: i32 = 10;
+        let guess: i32 = 12;
         match guess {
             1 => break,
             2 => gessinggame::gessing_game(),
@@ -55,6 +58,8 @@ fn main() {
             8 => chapter_5::chapter_5(),
             9 => chapter_5::area(),
             10 => chapter_6::ownership(),
+            11 => file_service::main(),
+            12 => example_copy::main(),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
 
