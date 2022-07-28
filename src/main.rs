@@ -7,6 +7,7 @@ pub mod rust_dock;
 pub mod chapter_3;
 pub mod chapter_4;
 pub mod chapter_5;
+pub mod chapter_6;
 
 
 fn _main() {
@@ -29,6 +30,7 @@ fn main() {
         println!("7 for Ownership");
         println!("8 for Chapter 5");
         println!("9 for Area");
+        println!("10 für Emums");
 
         /*        let mut guess = String::new();
 
@@ -41,7 +43,7 @@ fn main() {
                     Err(_) => continue,
                 };*/
 
-        let guess: i32 = 9;
+        let guess: i32 = 10;
         match guess {
             1 => break,
             2 => gessinggame::gessing_game(),
@@ -52,9 +54,10 @@ fn main() {
             7 => chapter_4::ownership(),
             8 => chapter_5::chapter_5(),
             9 => chapter_5::area(),
+            10 => chapter_6::ownership(),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
-        
+
         break;
     }
 }
