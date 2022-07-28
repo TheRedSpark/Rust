@@ -9,11 +9,13 @@ use fs_extra::error::*;
 
 
 fn example_copy() -> Result<()> {
-    let path_from = Path::new("Ausgangsordner");
+    let path_from = Path::new("R:/Backup");
     let path_to = Path::new("Eingangsordner");
+    let path_shadow = Path::new("Shadowordner");
 
     create_all(&path_from, false)?;
     create_all(&path_to, false)?;
+    create_all(&path_shadow,false)?;
 
 
 
@@ -28,6 +30,7 @@ fn example_copy() -> Result<()> {
             thread::sleep(time::Duration::from_millis(500));
         };
         copy(&path_from, &path_to, &options).unwrap();
+        copy(&path_from, &path_shadow, &options).unwrap();
     });
 
     loop {
@@ -38,7 +41,7 @@ fn example_copy() -> Result<()> {
                          process_info.total_bytes);
             }
             Err(TryRecvError::Disconnected) => {
-                println!("finished");
+                println!("Finished");
                 break;
             }
             Err(TryRecvError::Empty) => {}
