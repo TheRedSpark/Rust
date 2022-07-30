@@ -35,7 +35,7 @@ fn main() {
         println!("10 for Emums");
         println!("11 for File Service");
 
-        /*        let mut guess = String::new();
+/*                let mut guess = String::new();
 
                 io::stdin()
                     .read_line(&mut guess)
