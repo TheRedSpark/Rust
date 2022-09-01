@@ -10,6 +10,7 @@ pub mod chapter_5;
 pub mod chapter_6;
 pub mod file_service;
 pub mod example_copy;
+pub mod calculator;
 
 
 fn _main() {
