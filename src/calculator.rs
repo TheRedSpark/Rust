@@ -1,10 +1,20 @@
 use std::env::args;
-
+use std::io;
 
 pub(crate) fn main_calc() {
-    let operator = "+";
-    let first: f64 = 6.0;
-    let last: f64 = 2.0;
+
+    println!("Gib die erste Zahl ein.");
+    let mut first = String::new();
+    io::stdin().read_line(&mut first).expect("Failed to read line");
+    let first: f64 = first.trim().parse().unwrap();
+    println!("Gib die Rechenoperation an.");
+    let mut operator = String::new();
+    io::stdin().read_line(&mut operator).expect("Failed to read line");
+    let operator: &str = operator.trim();
+    println!("Gib die 2 Zahl an.");
+    let mut last = String::new();
+    io::stdin().read_line(&mut last).expect("Failed to read line");
+    let last: f64 = last.trim().parse().unwrap();
     match operator {
         "*" => {
             let result = multipy(first, last);
