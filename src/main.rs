@@ -1,3 +1,4 @@
+#![allow(dead_code, unused)]
 extern crate core;
 
 use std::io;
@@ -22,7 +23,7 @@ fn _main() {
 
 fn main() {
     loop {
-        println!("");
+/*        println!("");
         println!("Choose your Subprogram");
         println!("1 for Exit");
         println!("2 for Gessing-Game");
@@ -34,7 +35,7 @@ fn main() {
         println!("8 for Chapter 5");
         println!("9 for Area");
         println!("10 for Emums");
-        println!("11 for File Service");
+        println!("11 for File Service");*/
 
 /*                let mut guess = String::new();
 
@@ -47,7 +48,7 @@ fn main() {
                     Err(_) => continue,
                 };*/
 
-        let guess: i32 = 12;
+        let guess: i32 = 13;
         match guess {
             1 => break,
             2 => gessinggame::gessing_game(),
@@ -61,6 +62,7 @@ fn main() {
             10 => chapter_6::ownership(),
             11 => file_service::main(),
             12 => example_copy::main(),
+            13 => calculator::main_calc(),
             _ => println!("Bitte gib eine verfügbare Nummer ein"),
         }
 
